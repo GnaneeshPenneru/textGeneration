@@ -2,9 +2,7 @@ import streamlit as st
 import requests
 from PIL import Image
 from io import BytesIO
-
-# Streamlit title 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
-st.title('Text-to-Image Generator using Stable Diffusion API by Haritha V')
+st.title('Text-to-Image Generator using Stable Diffusion API')
 
 # Text prompt input
 prompt = st.text_input("Enter a text prompt:", value="A serene beach at sunset")
@@ -16,7 +14,7 @@ if st.button("Generate Image"):
 
     # Set up headers
     headers = {
-        "Authorization": "Bearer your_api_key"  # Use your Hugging Face API key if necessary
+        "Authorization": "your_api_key"  # Use your Hugging Face API key if necessary
     }
 
     # Data for the request
